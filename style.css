@@ -1,0 +1,380 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo&family=Flow+Circular&display=swap');
+
+body {
+	font-family: "Archivo", sans-serif;
+	font-size: 16px;
+	font-weight: 600;
+	line-height: 1.8;
+	color: #595959;
+	background-color: #F0F0F0;
+	margin-bottom: 0px;
+	box-sizing: border-box;
+}
+
+a, a:hover, a:visited, a:active, a:any-link {
+	color: #595959;
+}
+
+/*------------ FONTS --------------*/
+
+.paper h1,
+.paper h2,
+.paper h3,
+.paper h4,
+.paper p {
+	color: #262626;
+	width: 100%;
+}
+
+.paper h1 {
+	font-size: 5em;
+	line-height: 1.0;
+	margin-bottom: 1em;
+
+}
+
+.paper h2 {
+	font-size: 4em;
+	line-height: 1.0;
+
+}
+
+.paper h3 {
+	font-size: 3em;
+	line-height: 1.1;
+
+}
+
+
+.control-panel h3 {
+	font-size: 24px;
+	font-weight: 600;
+	line-height: 1.2;
+
+}
+
+
+.paper h4 {
+	font-size: 2rem;
+	font-weight: 600;
+	line-height: 1.2;
+	hyphens: auto;
+}
+
+.control-panel h4 {
+	font-size: 20px;
+}
+
+.paper p {
+	margin: 8px 0 48px 0;
+	color: #595959;
+	font-weight: 300;
+}
+
+/*------------ PAGE STRUCTURE --------------*/
+
+main {
+	display: flex;
+	align-items: stretch;
+	width: 100vw;
+	position: relative;
+
+}
+
+main .paper {
+	/*
+	background-color: #fff;
+	box-shadow: 0px 14px 24px rgba(147, 154, 187, 0.24);
+	border-radius: 24px;*/
+	border-right: 1px dashed #737373;
+	margin: 0px 64px 0px 0px;
+	padding: 64px;
+
+	outline: none;
+	width: 100%;
+
+	word-break: break-word;
+	position: sticky;
+	left: 0px;
+	top: 0px;
+	height: 100vh;
+	overflow-y: scroll;
+}
+
+main div.control-panel {
+	margin: 80px 80px 80px 0;
+	display: flex;
+	flex-direction: column;
+}
+
+footer {
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	padding: 12px 48px 12px 64px;
+	background-color: #F0f0f0;
+	border-top: 1px solid #404040;
+}
+
+
+/*------------ CONTROL PANEL STRUCTURE --------------*/
+
+div.control--top-category {
+	padding: 24px 0 48px 0px;
+	border-bottom: 1px solid #fff;
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+	width: 300px;
+}
+
+div.control--top-category:last-child {
+	border-bottom: 0;
+	box-sizing: border-box;
+}
+
+div.control--sub-category {
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+	margin-bottom: 32px;
+}
+
+
+
+
+/*------------STYLIZING THE FORM --------------*/
+
+div.font-category {
+	position: relative;
+	display: flex;
+	margin: 0 0 16px 0;
+}
+
+.big-chevron {
+	position: absolute;
+	top: 18px;
+	left: 120px;
+	pointer-events: none;
+}
+
+.small-chevron {
+	position: absolute;
+	top: 6px;
+	right: 8px;
+	pointer-events: none;
+}
+
+div.dropdown {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	background-color: #fff;
+	border-radius: 28px;
+	justify-content: space-between;
+	position: relative;
+}
+
+div.font-category select {
+	position: relative;
+	height: 56px;
+	padding: 0 64px 0 16px;
+	width: 180px;
+	background-color: rgba(255, 255, 255, 0%);
+	border-radius: 28px;
+	border: 0px;
+	outline: none;
+	-webkit-appearance: none;
+	-webkit-border-radius: 28px;
+	-moz-appearance: auto;
+	appearance: none;
+}
+
+.btn {
+	display: flex;
+	background: #212048;
+	height: 56px;
+	align-items: center;
+	justify-content: center;
+	padding: 0 16px;
+	color: #fff;
+	gap: 8px;
+	border-radius: 28px;
+	box-shadow: 0px 4px 0px rgba(147, 154, 187, 0.80);
+	position: absolute;
+	transform: translateY(-4px);
+	right: 0;
+	cursor: pointer;
+}
+
+.btn:hover {
+	background: linear-gradient(45deg, #69708B 9.09%, #B661A8 50.76%, #6C6AE2 100%);
+	box-shadow: 0px 4px 0px rgba(0, 0, 0, 0.80);
+}
+
+.btn:active {
+	background: linear-gradient(90deg, #69708B 9.09%, #B661A8 50.76%, #6C6AE2 100%);
+	box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.80);
+	transform: translateY(1px);
+}
+
+form {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	margin: 0 0 16px 0;
+}
+
+form.display-current {
+	position: relative;
+	display: flex;
+	gap: 8px;
+}
+
+form.display-current label {
+	flex-shrink: 0;
+}
+
+form.display-current select {
+	border: none;
+	background: none;
+	width: inherit;
+	-webkit-appearance: none;
+	-webkit-border-radius: 28px;
+	-moz-appearance: none;
+	appearance: none;
+}
+
+form .radio-item {
+	display: flex;
+	flex-direction: row;
+	gap: 8px;
+}
+
+
+div.slider-w-value {
+	display: flex;
+	flex-direction: row;
+	gap: 8px;
+}
+
+input[type=range] {
+	width: 100%;
+}
+
+
+/*------------SLIDER STYLING --------------*/
+
+input[type=range] {
+	-webkit-appearance: none;
+	/* Hides the slider so that custom slider can be made */
+	width: 100%;
+	/* Specific width is required for Firefox. */
+	margin: 0;
+	background: transparent;
+	/* Otherwise white in Chrome */
+}
+
+input[type=range]:focus {
+	outline: none;
+	/* Removes the blue border. You should probably do some kind of focus styling for accessibility reasons though. */
+}
+
+input[type=range]::-ms-track {
+	width: 100%;
+	cursor: pointer;
+
+	/* Hides the slider so custom styles can be added */
+	background: transparent;
+	border-color: transparent;
+	color: transparent;
+}
+
+
+/* Special styling for WebKit/Blink */
+input[type=range]::-webkit-slider-thumb {
+	-webkit-appearance: none;
+	border: 1px solid #FFF;
+	height: 24px;
+	width: 24px;
+	border-radius: 50%;
+	background: #212048;
+	cursor: pointer;
+	margin-top: -14px;
+	/* You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
+}
+
+/* All the same stuff for Firefox */
+input[type=range]::-moz-range-thumb {
+	border: 1px solid #FFF;
+	height: 24px;
+	width: 24px;
+	border-radius: 50%;
+	background: #212048;
+	cursor: pointer;
+}
+
+/* All the same stuff for IE */
+input[type=range]::-ms-thumb {
+	border: 1px solid #FFF;
+	height: 24px;
+	width: 24px;
+	border-radius: 50%;
+	background: #212048;
+	cursor: pointer;
+}
+
+
+
+input[type=range]::-webkit-slider-runnable-track {
+	width: 100%;
+	height: 1px;
+	cursor: pointer;
+	background: #212048;
+}
+
+input[type=range]:focus::-webkit-slider-runnable-track {
+	background: #367ebd;
+}
+
+input[type=range]::-moz-range-track {
+	width: 100%;
+	height: 8.4px;
+	cursor: pointer;
+	box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+	background: #3071a9;
+	border-radius: 1.3px;
+	border: 0.2px solid #010101;
+}
+
+input[type=range]::-ms-track {
+	width: 100%;
+	height: 8.4px;
+	cursor: pointer;
+	background: transparent;
+	border-color: transparent;
+	border-width: 16px 0;
+	color: transparent;
+}
+
+input[type=range]::-ms-fill-lower {
+	background: #2a6495;
+	border: 0.2px solid #010101;
+	border-radius: 2.6px;
+	box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+}
+
+input[type=range]:focus::-ms-fill-lower {
+	background: #3071a9;
+}
+
+input[type=range]::-ms-fill-upper {
+	background: #3071a9;
+	border: 0.2px solid #010101;
+	border-radius: 2.6px;
+	box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+}
+
+input[type=range]:focus::-ms-fill-upper {
+	background: #367ebd;
+}

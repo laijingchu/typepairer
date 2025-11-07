@@ -1,0 +1,239 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<!--no cache-->
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="-1" />
+    <!--end no cache-->
+	<title>Pick a d*mn font</title>
+
+	<link rel="stylesheet" href="base.css?002">
+	<link rel="stylesheet" href="style.css?002">
+	<link rel="stylesheet" href="">
+	<link rel="stylesheet" href="">
+	<link href="../favicon.ico" rel="icon" type="image/x-icon" />
+	<style>
+		.paper p {
+			font-family: 'Flow Circular', sans-serif;
+			font-size: 28px;
+		}
+
+	</style>
+	<style>
+		.paper h1,
+		.paper h2,
+		.paper h3,
+		.paper h4 {
+			font-family: 'Flow Circular', sans-serif;
+		}
+
+	</style>
+</head>
+
+<body>
+
+	<!--****************************************************************
+                          PAPER- TYPE PREVIEW AREA
+        ****************************************************************-->
+
+	<main>
+		<div class="paper" contenteditable="true">
+			<h1>There are 1.5K Google Fonts, but you chose Roboto.</h1>
+			<h2>Let’s give everyone a chance.</h2>
+			<p>Ever suffer from paralysis while trying to pick a font? This little tool is meant to help generate ideas for font pairings and type scales that you’ve never thought of before. Below is how it works.</p>
+
+			<h3>Two modes</h3>
+			<p>On the control panel, you can choose between these two modes. You can start by using “Randomize” to spark some broadstroke ideas, and then use customize to make little tweaks to your heart’s content.</p>
+
+			<h4>Randomize</h4>
+			<p>When you click on the "Randomize" button, a random font will be applied to the preview text. Keep clicking to discover different possibilities! You can also confine your search to specific font categories such as serif, sans-serif, monospace, etc. using the dropdown.</p>
+
+			<h4>Customize</h4>
+			<p>All the other features fall under "Customize." You can click on "Current Font" to specify a font. You can also select a type scale and customize the white space to emulate your layout needs!</p>
+		</div>
+
+
+
+		<!--****************************************************************
+                                CONTROL PANEL
+        ****************************************************************-->
+
+		<div class="control-panel">
+
+			<!----START OF HEADER FONT----->
+			<div class="control--top-category">
+				<h3>Header font</h3>
+
+				<div class="dropdown font-category">
+				
+					<select name="font-category--header" id="font-category--header">					
+						<option value="any">Any</option>
+						<option value="serif">Serif</option>
+						<option value="sans-serif">Sans serif</option>
+						<option value="display">Display</option>
+						<option value="caps">Caps</option>
+						<option value="small caps">Small caps</option>
+						<option value="monospace">Monospace</option>
+						<option value="redacted">Redacted</option>
+						</select>
+						<img src="big-chevron.svg" class="big-chevron">
+					<div class="btn random-h-font"><img src="icon-randomize.svg">Randomize</div>
+				</div>
+
+
+
+				<form class="radio-btns letter-casing">
+					<div class="radio-item">
+						<input type="radio" id="sentence-case" name="letter-casing" checked> <label for="sentence-case">Ag ag</label>
+					</div>
+					<div class="radio-item">
+						<input type="radio" id="title-case" name="letter-casing"> <label for="title-case">Ag Ag</label>
+					</div>
+					<div class="radio-item">
+						<input type="radio" id="upper-case" name="letter-casing"> <label for="upper-case">AG AG</label>
+					</div>
+				</form>
+
+
+				<form class="display-current">
+					<label for="current-font--header">Current font:</label>
+
+					<select name="header-font" id="header-font">
+						<option value="Flow Circular">Flow Circular</option>
+					</select>
+					<img src="small-chevron.svg" class="small-chevron">
+				</form>
+				
+				<div class="control--sub-category">
+					<h4>Header font weight</h4>
+					<div class="slider-w-value">
+						<input type="range" value="300" max="800" min="100" step="100" name="header-font-weight">
+						<label for="header-font-weight">300</label>
+					</div>
+				</div>
+			</div>
+			<!--END OF HEADER FONT-->
+
+			<!----START OF BODY FONT----->
+			<div class="control--top-category">
+				<h3>Body font</h3>
+
+				<div class="dropdown font-category">
+				
+					<select name="font-category--body" id="font-category--body">
+						<option value="any">Any</option>
+						<option value="serif">Serif</option>
+						<option value="sans-serif">Sans serif</option>
+						<option value="display">Display</option>
+						<option value="condensed">Condensed</option>
+						<option value="caps">Caps</option>
+						<option value="small caps">Small caps</option>
+						<option value="monospace">Monospace</option>
+						<option value="redacted">Redacted</option>
+					</select>
+					<img src="big-chevron.svg" class="big-chevron body">
+					<div class="btn random-b-font"><img src="icon-randomize.svg">Randomize</div>
+				</div>
+
+				<form class="display-current">
+					<label for="current-font--body">Current font:</label>
+					<select name="body-font" id="body-font">
+						<option value="Flow Circular">Flow Circular</option>
+					</select>
+					<img src="small-chevron.svg" class="small-chevron">
+				</form>
+
+				<div class="control--sub-category">
+					<h4>Base font size</h4>
+					<div class="slider-w-value">
+						<input type="range" value="28" max="56" min="12" name="base-font-size">
+						<label for="base-font-size">28px</label>
+					</div>
+				</div>
+				<div class="control--sub-category">
+					<h4>Body font weight</h4>
+					<div class="slider-w-value">
+						<input type="range" value="300" max="800" min="100" step="100" name="body-font-weight">
+						<label for="body-font-weight">300</label>
+					</div>
+				</div>
+
+			</div>
+			<!--END OF BODY FONT-->
+
+			<!----START OF TYPE SCALE----->
+			<div class="control--top-category">
+				<h3>Type scale</h3>
+
+				<div class="slider-only">
+					<input type="range" value="1.250" max="1.600" min="1.000" step="0.005" name="type-scale">
+				</div>
+
+				<form class="display-current">
+					<label for="current-scale">Current scale:</label>
+
+					<select name="type-scale" id="type-scale">
+						<option>Major Third</option>
+					</select>
+					<img src="small-chevron.svg" class="small-chevron">
+				</form>
+			</div>
+			<!--END OF TYPE SCALE-->
+
+			<!----START OF WHITE SPACE----->
+			<div class="control--top-category">
+				<h3>White space</h3>
+
+				<div class="control--sub-category">
+					<h4>Line height</h4>
+					<div class="slider-w-value">
+						<input type="range" value="1.8" max="2.5" min="1.0" step="0.1" name="line-height">
+						<label for="line-height">1.8</label>
+					</div>
+				</div>
+
+				<div class="control--sub-category">
+					<h4>Line width</h4>
+					<div class="slider-w-value">
+						<input type="range" value="700" max="1700" min="100" step="20" name="line-width">
+						<label for="line-width">700px</label>
+					</div>
+				</div>
+				<div class="control--sub-category">
+					<h4>Paragraph spacing</h4>
+					<div class="slider-w-value">
+						<input type="range" value="12px" max="100" min="10" step="4" name="p-spacing">
+						<label for="p-spacing">12px</label>
+					</div>
+				</div>
+				<div class="control--sub-category">
+					<h4>Page margins</h4>
+					<div class="slider-w-value">
+						<input type="range" value="88px" max="200" min="16" step="4" name="page-margins">
+						<label for="page-margins">88px</label>
+					</div>
+				</div>
+			</div>
+			<!--END OF WHITE SPACE-->
+
+		</div>
+
+	</main>
+
+	<!--****************************************************************
+                                FOOTER
+        ****************************************************************-->
+	<footer>
+		<p><a href="http://www.laijingchu.online">Lai Jing Chu's</a> microsite — Type Pairer v.1.0. 2022.</p>
+	</footer>
+
+
+</body>
+<script src="sliders.js"></script>
+<script src="font-selectors.js"></script>
+<script src="typescale.js"></script>
+
+</html>
